@@ -1,1 +1,43 @@
-<meta http-equiv="refresh" content="0; url=https://redfox-studios.org">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhiteCatDevs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@400;700&family=Geist+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist Sans', 'sans-serif'],
+              mono: ['Geist Mono', 'monospace']
+            },
+            colors: {
+              primary: require('tailwindcss/colors').zinc
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html, body { height: 100%; }
+    </style>
+  </head>
+  <body class="bg-white text-zinc-900 font-sans flex items-center justify-center h-screen">
+    <section class="text-center px-6">
+      <img src="whitecat.svg" alt="Cute White Cat" class="w-36 h-36 mx-auto mb-6 animate-[float_3s_ease-in-out_infinite]" />
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">WhiteCatDevs</h1>
+      <p class="text-lg md:text-xl text-zinc-600 max-w-xl mx-auto mb-32">Sleek design. Purring performance. Nerdy cats building working software.</p>
+      <p></p>
+    </section>
+    <style>
+      @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+      }
+    </style>
+  </body>
+</html>

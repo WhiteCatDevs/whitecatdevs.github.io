@@ -3,41 +3,199 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WhiteCatDevs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@400;700&family=Geist+Mono&display=swap" rel="stylesheet">
+    <title>WhiteCatDevs | Web, UI/UX and automation</title>
+    <meta
+      name="description"
+      content="WhiteCatDevs designs and delivers fast, clean, and reliable web solutions, from UI/UX design to development and automation."
+    />
+    <meta property="og:title" content="WhiteCatDevs" />
+    <meta
+      property="og:description"
+      content="Sleek design. Purring performance. Nerdy cats building working software."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="whitecat.svg" />
+    <meta name="theme-color" content="#f25f3a" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WhiteCatDevs",
+        "url": "https://whitecatdevs.github.io",
+        "email": "7heKubko@gmail.com",
+        "sameAs": ["https://github.com/whitecatdevs"],
+        "description": "Web development, UI/UX design and process automation."
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Geist Sans', 'sans-serif'],
-              mono: ['Geist Mono', 'monospace']
+              sans: ["Space Grotesk", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
             },
             colors: {
-              primary: require('tailwindcss/colors').zinc
-            }
-          }
-        }
+              brand: {
+                50: "#fff1eb",
+                100: "#ffe1d6",
+                500: "#f25f3a",
+                700: "#b6391c",
+                900: "#5c1b0d",
+              },
+              ink: "#131313",
+              mist: "#f6f3ef",
+            },
+            boxShadow: {
+              soft: "0 10px 40px rgba(19, 19, 19, 0.10)",
+            },
+          },
+        },
       };
     </script>
-    <style>
-      html, body { height: 100%; }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body class="bg-white text-zinc-900 font-sans flex items-center justify-center h-screen">
-    <section class="text-center px-6">
-      <img src="whitecat.svg" alt="Cute White Cat" class="w-36 h-36 mx-auto mb-6 animate-[float_3s_ease-in-out_infinite]" />
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">WhiteCatDevs</h1>
-      <p class="text-lg md:text-xl text-zinc-600 max-w-xl mx-auto mb-32">Sleek design. Purring performance. Nerdy cats building working software.</p>
-      <p></p>
-    </section>
-    <style>
-      @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-      }
-    </style>
+  <body class="font-sans text-ink antialiased">
+    <div class="dot-grid">
+      <header class="sticky top-0 z-20 backdrop-blur border-b border-black/5 bg-white/75">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <a href="#top" class="font-bold tracking-tight text-lg">WhiteCatDevs</a>
+          <ul class="flex items-center gap-4 sm:gap-6 text-sm sm:text-base">
+            <li><a href="#services" class="hover:text-brand-700 transition-colors">Services</a></li>
+            <li><a href="#about" class="hover:text-brand-700 transition-colors">About</a></li>
+            <li><a href="#contact" class="hover:text-brand-700 transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="top" class="max-w-6xl mx-auto px-4 sm:px-6">
+        <section class="min-h-[84vh] flex flex-col justify-center py-16 sm:py-24">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p class="reveal text-sm sm:text-base font-mono text-brand-700 mb-4">Boutique software studio</p>
+              <h1 class="reveal delay-1 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
+                Design that converts.<br />
+                Code that scales.
+              </h1>
+              <p class="reveal delay-2 text-base sm:text-lg text-black/70 max-w-xl mb-8">
+                We build websites and digital products that are fast, clear and ready to grow. Nerdy cats,
+                serious results.
+              </p>
+              <div class="reveal delay-3 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a
+                  href="#services"
+                  class="inline-flex justify-center items-center px-6 py-3 rounded-xl bg-brand-500 text-white font-semibold shadow-soft hover:bg-brand-700 transition-colors"
+                >
+                  Explore services
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-flex justify-center items-center px-6 py-3 rounded-xl border border-black/20 bg-white hover:bg-black/5 transition-colors"
+                >
+                  Contact us
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal delay-4 relative mx-auto w-full max-w-md">
+              <div class="absolute -inset-6 bg-gradient-to-br from-brand-100 to-white rounded-3xl blur-2xl"></div>
+              <div class="relative bg-white/90 border border-black/10 rounded-3xl p-8 shadow-soft">
+                <div class="w-fit mx-auto mb-6 cat-float">
+                  <img
+                    id="cat"
+                    src="whitecat.svg"
+                    alt="WhiteCatDevs mascot"
+                    width="220"
+                    height="220"
+                    class="w-40 h-40 sm:w-52 sm:h-52 cat-interactive"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="py-14 sm:py-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-8">Services</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <article class="bg-white border border-black/10 rounded-2xl p-6 shadow-soft">
+              <h3 class="font-bold text-xl mb-2">Web Development</h3>
+              <p class="text-black/70">High-performance websites and apps, from landing pages to full business solutions.</p>
+            </article>
+            <article class="bg-white border border-black/10 rounded-2xl p-6 shadow-soft">
+              <h3 class="font-bold text-xl mb-2">UI/UX Design</h3>
+              <p class="text-black/70">Thoughtful screens, clear user flows and a consistent design system.</p>
+            </article>
+            <article class="bg-white border border-black/10 rounded-2xl p-6 shadow-soft sm:col-span-2 lg:col-span-1">
+              <h3 class="font-bold text-xl mb-2">Automation</h3>
+              <p class="text-black/70">We automate repetitive workflows so your team can deliver more with less effort.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" class="py-14 sm:py-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-8">About</h2>
+          <div class="bg-white border border-black/10 rounded-2xl p-6 sm:p-8 shadow-soft">
+            <p class="text-base sm:text-lg text-black/80 leading-relaxed mb-4">
+              We are currently learning App and Game Development.
+            </p>
+            <p class="text-base sm:text-lg text-black/80 leading-relaxed">
+              Ask us about apps, games and collaborations with RedFox Studios and WhiteCatDevs.
+            </p>
+            <p class="text-base sm:text-lg text-black/80 leading-relaxed mt-4">Fun fact: we like cats.</p>
+          </div>
+        </section>
+
+        <section class="py-2 sm:py-6">
+          <div class="bg-white border border-black/10 rounded-2xl p-6 sm:p-8 shadow-soft">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Tech Stack</h2>
+            <p class="text-sm sm:text-base text-black/80 font-mono leading-relaxed">
+              C# C++ CSS3 HTML5 JavaScript Lua Markdown PowerShell Bash Script TypeScript Windows Terminal Vercel
+              .Net Next JS NodeJS PNPM NPM Radix UI React SQLite Aseprite Blender Canva Figma Krita Git GitHub
+              Itch.io Steam Unity Unreal Engine Epic Games Raspberry Pi
+            </p>
+          </div>
+        </section>
+
+        <section class="py-10 sm:py-12">
+          <div class="bg-brand-50 border border-brand-100 rounded-2xl p-6 sm:p-8 shadow-soft">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3">Support Us</h2>
+            <p class="text-black/80 mb-4">You can help us by donating.</p>
+            <a
+              href="https://paypal.me/7heKubko"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex justify-center items-center px-5 py-3 rounded-xl bg-brand-500 text-white font-semibold shadow-soft hover:bg-brand-700 transition-colors"
+            >
+              Donate via PayPal
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" class="mt-8 border-t border-black/10 bg-white/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12 grid gap-6 sm:grid-cols-2 items-start">
+          <div>
+            <h2 class="text-2xl font-bold mb-3">WhiteCatDevs</h2>
+            <p class="text-black/70 max-w-md">Sleek design. Purring performance. Nerdy cats building working software.</p>
+          </div>
+          <div class="sm:justify-self-end text-sm sm:text-base">
+            <p><a href="mailto:7heKubko@gmail.com" class="hover:text-brand-700">7heKubko@gmail.com</a></p>
+            <p><a href="https://github.com/whitecatdevs" class="hover:text-brand-700">github.com/whitecatdevs</a></p>
+            <p class="text-black/60 mt-2">2026 WhiteCatDevs. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,77 @@
+:root {
+  --dot: rgba(242, 95, 58, 0.18);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(242, 95, 58, 0.14), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(19, 19, 19, 0.06), transparent 30%),
+    linear-gradient(160deg, #fffdfb 0%, #f8f6f2 100%);
+}
+
+.dot-grid {
+  background-image: radial-gradient(var(--dot) 0.9px, transparent 0.9px);
+  background-size: 22px 22px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal 0.7s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.cat-float {
+  animation: float 3.2s ease-in-out infinite;
+}
+
+.cat-interactive {
+  will-change: transform;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
